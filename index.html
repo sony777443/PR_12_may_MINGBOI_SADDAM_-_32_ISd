@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 20px; transition: background 0.3s, color 0.3s; }
+        body.dark-mode { background: #1a1a1a; color: #e8e8e8; }
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .theme-toggle { background: #ddd; width: 50px; height: 24px; border-radius: 12px; position: relative; cursor: pointer; border: none; display: flex; align-items: center; padding: 0 2px; transition: background 0.3s; }
+        .theme-toggle:hover { background: #bbb; }
+        body.dark-mode .theme-toggle { background: #444; }
+        body.dark-mode .theme-toggle:hover { background: #555; }
+        .theme-toggle::after { content: ''; display: block; width: 20px; height: 20px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; font-size: 12px; }
+        body.dark-mode .theme-toggle::after { content: ''; transform: translateX(26px); background: #333; }
+        .profile-icon { width: 36px; height: 36px; background: #ddd; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: background 0.3s, transform 0.2s; }
+        .profile-icon:hover { background: #bbb; transform: scale(1.1); }
+        body.dark-mode .profile-icon { background: #444; }
+        body.dark-mode .profile-icon:hover { background: #555; }
+
+        .news-section { background: white; padding: 20px; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: background 0.3s, box-shadow 0.3s; }
+        body.dark-mode .news-section { background: #2a2a2a; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .news-card { display: flex; border: 1px solid #eee; padding: 15px; margin-bottom: 15px; border-radius: 5px; transition: border-color 0.3s, background 0.3s; }
+        body.dark-mode .news-card { border-color: #444; }
+        .img-placeholder { width: 100px; height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; margin-right: 15px; transition: background 0.3s; }
+        body.dark-mode .img-placeholder { background: #444; }
+        .news-info { flex: 1; }
+        .meta { font-size: 12px; color: #777; margin-bottom: 5px; transition: color 0.3s; }
+        body.dark-mode .meta { color: #999; }
+        .read-more { background: white; border: 1px solid #333; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 12px; transition: background 0.3s, border-color 0.3s, color 0.3s; }
+        body.dark-mode .read-more { background: #333; border-color: #666; color: #e8e8e8; }
+
+        .pagination { display: flex; gap: 10px; align-items: center; margin-top: 20px; }
+        .page-box { border: 1px solid #333; padding: 5px 10px; cursor: pointer; transition: background 0.3s, border-color 0.3s, color 0.3s; }
+        body.dark-mode .page-box { border-color: #666; color: #e8e8e8; }
+
+        .profile-section { background: white; padding: 30px; border-radius: 8px; display: flex; gap: 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: background 0.3s, box-shadow 0.3s; }
+        body.dark-mode .profile-section { background: #2a2a2a; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .profile-left { text-align: center; width: 250px; }
+        .avatar-large { width: 100px; height: 100px; background: #eee; border-radius: 50%; margin: 0 auto 15px; transition: background 0.3s; }
+        body.dark-mode .avatar-large { background: #444; }
+        .salary { font-weight: bold; font-size: 1.2em; margin: 15px 0; }
+        .status { color: green; font-size: 0.9em; }
+
+        .profile-right { flex: 1; line-height: 1.8; }
+        .info-row { border-bottom: 1px dashed #ccc; display: flex; justify-content: space-between; transition: border-color 0.3s; }
+        body.dark-mode .info-row { border-color: #444; }
+        
+        .btn-back { margin-top: 20px; padding: 10px 20px; background: white; border: 1px solid #333; cursor: pointer; transition: background 0.3s, border-color 0.3s, color 0.3s; }
+        body.dark-mode .btn-back { background: #333; border-color: #666; color: #e8e8e8; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Новости</h1>
+                <div style="display: flex; gap: 20px; align-items: center;">
+            <span>Темы</span>
+            <div class="theme-toggle"></div>
+            <a href="3index.html" target="_blank">
+            <div class="profile-icon"></div>
+            
+            </a>
+        </div>
+    </header>
+
+    <section class="news-section">
+        <div class="news-card">
+            <div class="img-placeholder"><img src="фото1.png" alt="class" width="100"> </div>
+            <div class="news-info">
+                <div class="meta">09:36 / 12.05.2026 / world cup </div>
+                <p>Главный геймерский турнир на $ 70 млн. Всё про Кубок мира по киберспорту</p>
+                 <a href="2index.html" target="_blank">
+                <button class="read-more">ЧИТАТЬ ДАЛЕЕ</button>
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="news-card">
+            <div class="img-placeholder"><img src="фото4.png" alt="class" width="100"> </div>
+            <div class="news-info">
+                <div class="meta">10:55 / 12.05.2026 / world cup </div>
+                <p>Техники ведения переговоров: что такое якорение и фрейминг?</p>
+                 <a href="4index.html" target="_blank">
+                <button class="read-more">ЧИТАТЬ ДАЛЕЕ</button>
+                 </a>
+            </div>
+        </div>
+    </section>
+
+
+        <div class="pagination">
+            <span>страница 1 из 5</span>
+            <a href="2index.html" target="_blank"><div class="page-box">2</div></a>
+            <div class="page-box">2</div>
+            <div class="page-box">3</div>
+            <div class="page-box">4</div>
+            <div class="page-box">5</div>
+        </div>
+<script>
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+    
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+        themeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+</script>
+
+</body>
+</html>

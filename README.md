@@ -30,4 +30,7 @@
    git remote add origin <URL_вашего_GitLab_репозитория>
    
    ```
- `
+<img width="1099" height="674" alt="image" src="https://github.com/user-attachments/assets/bc4e2031-3647-4892-a019-2cc00ef75ec1" />
+<img width="1896" height="641" alt="image" src="https://github.com/user-attachments/assets/86baed7e-5f28-4788-84be-bd0bf57c8b44" />
+
+
